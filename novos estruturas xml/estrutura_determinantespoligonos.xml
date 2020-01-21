@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<software nome="area_poligonos">
+
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Áreas de triângulos</nome>
+		<descricao>Nesta atividade, você poderá rever uma maneira de calcular áreas de triângulos que possuem um vértice na origem.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+	
+	<!-- 2: 2a Atividade -->
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Área de um triângulo qualquer</nome>
+		<descricao>Nesta atividade, você aprenderá uma maneira de calcular a área de qualquer triângulo utilizando determinantes.</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+	
+	<!-- 3: 3a Atividade -->
+	<item><id>a3</id>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Áreas de polígonos</nome>
+		<descricao>Nesta atividade, você verá que o método apresentado na Atividade 2 pode ser utilizado para calcular a área de qualquer polígono.</descricao>
+		<posicao>
+			<coluna>3</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a2</com>
+		</ligacoes>
+	</item>
+</software>

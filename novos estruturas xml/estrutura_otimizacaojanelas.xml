@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<software nome="janelas-1a">
+	<curiosidades>
+		<curiosidade>
+			<titulo>A lenda de Dido</titulo>
+			<id>c1</id>
+		</curiosidade>
+	</curiosidades>
+	
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Janelas Retangulares</nome>
+		<descricao>Qual é a janela retangular de maior área?</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+
+	
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Qual é a melhor janela?</nome>
+		<descricao>Dentre os retângulos que possuem um mesmo perímetro, o quadrado é aquele que possui a maior área?</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+	
+</software>

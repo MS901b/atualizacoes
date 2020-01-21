@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<software nome="proglinear">
+	<!-- 1: 1a Atividade -->
+	<item>
+		<id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>A dieta</nome>
+		<descricao>Nesta atividade, você aprenderá como resolver um problema de otimização utilizando a técnica conhecida por Programação Linear.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+
+	<!-- 2: texto longo -->
+	<item><id>t1</id>
+		<tipo>transicao</tipo>
+		<nome>Transição</nome>
+		<descricao>Leia antes de resolver os problemas das atividades 2 e 3.</descricao>
+		<posicao>
+			<coluna>1.5</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>			
+		</ligacoes>
+	</item>		
+	
+	<!-- 3: 2a Atividade -->
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Um problema de transporte</nome>
+		<descricao>Nesta atividade, você verá um problema em que se busca a melhor quantidade de caminhões a ser indicada para um determinado trabalho. Ao resolver esse problema, você verá uma região de interesse ilimitada.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>2</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>
+		</ligacoes>
+	</item>
+	
+	<!-- 4: 3a Atividade -->
+	<item><id>a3</id>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Um problema de moradia</nome>
+		<descricao>Nesta atividade, você terá de decidir quantas casas devem ser construídas com certo recurso financeiro disponível, mas considerando também a demanda de pessoas que necessitam de moradias e quantas delas devem ocupar cada casa.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>
+		</ligacoes>
+	</item>
+	
+	
+</software>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<software nome="determinantes">
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Áreas de paralelogramos</nome>
+		<descricao>Nesta atividade você investigará a relação entre o determinante de uma matriz 2x2 e a área de um paralelogramo.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+
+	<!-- 2: texto longo -->
+	<item><id>t1</id>
+		<tipo>transicao</tipo>
+		<nome>Tela de transição</nome>
+		<descricao>Conclua a Atividade 1 e se prepare para as próximas 3 atividades deste software.</descricao>
+		<posicao>
+			<coluna>1.5</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>			
+		</ligacoes>
+	</item>	
+	
+	<!-- 3: 2a Atividade -->
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Produto por escalar</nome>
+		<descricao>Nesta atividade você poderá verificar se essa relação preserva a propriedade da "multiplicação por escalar" dos determinantes.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>2</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>			
+		</ligacoes>
+	</item>
+	
+	<!-- 4: 3a Atividade -->
+	<item><id>a3</id>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Soma de linhas</nome>
+		<descricao>Nesta atividade você poderá verificar se essa relação preserva a propriedade da "soma de linhas" dos determinantes.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>			
+		</ligacoes>
+	</item>
+
+	<!-- 4: 3a Atividade -->
+	<item><id>a4</id>
+		<tipo>atividade</tipo>
+		<rotulo>4</rotulo>
+		<nome>O sinal do determinante</nome>
+		<descricao>Nesta atividade você poderá verificar o comportamento do sinal dos determinantes.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>			
+		</ligacoes>
+	</item>		
+</software>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<software nome="halos1">
+	
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Encontrando a Lei de Snell</nome>
+		<descricao>Nesta atividade, você estudará a Lei de Snell, que estabelece uma função entre os ângulos de entrada e de saída de uma superfície que separa meios.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+
+	<!-- 2: 2a Atividade -->
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Entendendo a Xícara</nome>
+		<descricao>Nesta atividade, utiliza-se a Lei de Snell para explicar o vídeo da xícara que, ao ser preenchida com água, revela um dado até então invisível.</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+	
+	<!-- 3: 3a Atividade -->
+	<item><id>a3</id>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Encontrando o Princípio de Fermat</nome>
+		<descricao>Nesta Atividade, você aprenderá o que é o Princípio de Fermat e como ele pode ser utilizado para explicar o comportamento da luz.</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>2</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+
+</software>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<software nome="ondas">
+	
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>A Função Seno</nome>
+		<descricao>Nesta atividade, você irá se familiarizar com algumas propriedades matemáticas da função trigonométrica e periódica seno.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>-1</altura>
+		</posicao>
+	</item>
+
+	<item><id>t1</id>
+		<tipo>transicao</tipo>
+		<nome>Tela de Transição</nome>
+		<descricao>Se prepare para resolver alguns problemas com base no que aprendeu na primeira atividade.</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>			
+		</ligacoes>
+	</item>	
+	
+		<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Brilho Estelar</nome>
+		<descricao>Modele o brilho da estrela Delta Cephei.</descricao>
+		<posicao>
+			<coluna>3</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>
+		</ligacoes>
+	</item>
+	
+	<item><id>a3</id>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Marés</nome>
+		<descricao>Encontre uma função que descreva a oscilação das marés.</descricao>
+		<posicao>
+			<coluna>3</coluna>
+			<altura>-2</altura>
+		</posicao>
+		<ligacoes>
+			<com>t1</com>
+		</ligacoes>
+	</item> 
+	
+</software>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<software nome="maximo">
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Investigando Jogo do Máximo</nome>
+		<descricao>Uma investigação inicial do jogo a partir da análise de um grande número de simulações.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+
+	<item>
+	<id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Desmistificando o jogo:</nome>
+		<descricao>Qual jogador ganha mais, afinal?</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>-1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+	
+	<item><id>d1</id>
+		<tipo>desafio</tipo>
+		<nome>Desafio</nome>
+		<descricao>Manipulando as probabilidades de ocorrência dos números por meio da atribuição de pesos.</descricao>
+				<posicao>
+			<coluna>3</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a2</com>
+		</ligacoes>
+	</item>
+
+</software>
+	

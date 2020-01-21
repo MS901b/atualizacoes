@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<software nome="mat_fin">
+
+	<!-- 1: 1a Atividade -->
+	<item><id>a1</id>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Guardando no Banco</nome>
+		<descricao>Guarde dinheiro na poupança pelo período que escolher para poder dar o valor economizado como entrada na aquisição da moto.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>1</altura>
+		</posicao>
+	</item>
+	
+	<!-- 2: 2a Atividade -->
+	<item><id>a2</id>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>O Financiamento</nome>
+		<descricao>Com a ajuda da sua avó, financie o restante do valor da moto e pague em parcelas com valor fixo até abater toda a dívida.</descricao>
+		<posicao>
+			<coluna>2</coluna>
+			<altura>1</altura>
+		</posicao>
+		<ligacoes>
+			<com>a1</com>
+		</ligacoes>
+	</item>
+</software>
