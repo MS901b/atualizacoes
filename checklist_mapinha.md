@@ -20,6 +20,11 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 							<param name="wmode" value="transparent">
 						</object>
 ```
+
+- Na função `resetar()`, existem chamadas do tipo `$('SalvaLocal').Salva(nomeSoft, 'atividade_x',y)`, onde x é um número e o y o estado inicial. Como o estado inicial é definido agora na estrutura.xml, essas chamadas devem ser removidas. 
+	 * Remova as linhas apenas nas chamadas que tiverem, no segundo parâmetro, exatamente `atividade_x`, `transicao_x` ou `desafio_x` (ignore os casos com `automacao_` ou `_parte_`), sendo x um número.
+	 * Caso, ao invés de `'SalvaLocal'` esteja `'Mapinha'`, troque por `'SalvaLocal'`.
+
 - Colocar o seguinte bloco no mapa.html
 ```
 	<script>
@@ -112,3 +117,5 @@ Originalmente, o estado inicial do item era definido no mapa.html. Agora isso es
 |Aberto |1|
 |Iniciado |2|
 |Finalizado |3|
+
+> A mudança no estado da atividade no decorrer das execuções ocorre nas funções `tudoCerto()` nos arquivos _correcao.js da pasta scripts. Caso seja decidido "travar" alguma atividade, essa função deve ser alterada para que ocorra o "destrave" na conclusão da tarefa anterior.
