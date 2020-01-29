@@ -21,8 +21,9 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 						</object>
 ```
 
-- Na função `resetar()`, existem chamadas do tipo `$('SalvaLocal').Salva(nomeSoft, 'atividade_x',y)`, onde x é um número e o y o estado inicial. Como o estado inicial é definido agora na estrutura.xml, essas chamadas devem ser removidas. 
-	 * Remova as linhas apenas nas chamadas que tiverem, no segundo parâmetro, exatamente `atividade_x`, `transicao_x` ou `desafio_x` (ignore os casos com `automacao_` ou `_parte_`), sendo x um número.
+- Na função `resetar()`, para chamadas do tipo `$('SalvaLocal').Salva(nomeSoft, 'item_x',y)` ou `$('Mapinha').Salva(nomeSoft, 'item_x',y)`, onde item é `atividade`, `transicao` ou `desafio`, x é um número e o y o estado inicial, faremos o seguinte (ignore os casos com `automacao_` ou `_parte_`):
+	 * Copie essas linhas para passarmos esses estados iniciais para o estrutura.xml da pasta scripts (mais detalhes na seção sobre o estrutura.xml), caso necessário.
+	 * Remova essas linhas do mapa.html.
 	 * Caso, ao invés de `'SalvaLocal'` esteja `'Mapinha'`, troque por `'SalvaLocal'`.
 
 - Colocar o seguinte bloco no mapa.html
@@ -43,7 +44,7 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 ```
 > Repare que na criação do Mapinha, é passado como parâmetro o id da div que receberá o SVG (no caso "conteudo"), por isso é recomendado que este bloco seja inserido após a declaração da div em questão.
 
-##  estrutura.xml
+##  estrutura.xml (pasta scripts)
 > Há uma pasta `novas estruturas xml` em que se encontram algumas estruturas já convertidas seguindo o padrão descrito a seguir.
 
 > O mapinha agora dispõe os itens na vertical (houve uma inversão na interpretação entre as tags `<coluna>` e `<altura>`) . Como originalmente os itens possuíam alturas negativas ou positivas (pulando a altura  = 0), é possível que algum item pareça estar deslocado (deixa vago o espaço que seria do item de altura = 0). Isso pode ser ajustado, caso haja necessidade, mudando os valores das coordenadas.
@@ -109,7 +110,7 @@ Exemplo depois
 ```
 ### Estado inicial
 Originalmente, o estado inicial do item era definido no mapa.html. Agora isso está na estrutura.xml.
-- Colocar `<estadoinicial>x</estadoinicial>` dentro de cada `<item>`, onde x deve ser substituído pelo número correspondente ao estado inicial daquele item
+- Colocar `<estadoinicial>y</estadoinicial>` dentro de cada `<item>`, onde y deve ser substituído pelo número correspondente ao estado inicial daquele item (copiado do mapa.html anteriormente)
 
 | Estado |nº correspondente |
 |------------|-------|
@@ -118,4 +119,21 @@ Originalmente, o estado inicial do item era definido no mapa.html. Agora isso es
 |Iniciado |2|
 |Finalizado |3|
 
-> A mudança no estado da atividade no decorrer das execuções ocorre nas funções `tudoCerto()` nos arquivos _correcao.js da pasta scripts. Caso seja decidido "travar" alguma atividade, essa função deve ser alterada para que ocorra o "destrave" na conclusão da tarefa anterior.
+##  Arquivos _correcao.js (pasta scripts)
+
+### Aplicando estado "iniciado"
+Caso o mapinha não esteja funcionado como esperado (sem mudar as cores), verificar os arquivos _correcao.js
+- Procure por partes de código similar a seguinte (com `flash:`). Repare que o a mudança de estado (`setAtividade()`) depende do flash para funcionar.
+```
+Event.observe(document, 'flash:SalvaLocal', function(ev){
+	setAtividade('item_x',y,false);	//Comecou a fazer a item_y
+	flash_flag = 1;
+	exec_init();
+});
+```
+- Procure onde o estado do item é modificado (normalmente nas chamadas `setAtividade()` ou `setResp()`)
+- Caso essas chamadas estejam apenas nas partes que usam flash, copie a chamada do `setAtividade()` (ou `setResp()`) para uma função que é executada quando a página da atividade é carregada (normalmente exec_init() ou InitOnLoad()). Assim, logo quando o usuário entrar na atividade, o estado muda para "iniciado"
+
+
+### Aplicando estado "finalizado"
+A mudança no estado da atividade para "finalizado" ocorre nas funções `tudoCerto()`. Caso seja decidido "travar" alguma atividade, essa função deve ser alterada para que ocorra o "destrave" da tarefa seguinte usando as funções do tipo `setAtividade()` ou `setResp()`, passando o estado "aberto".
