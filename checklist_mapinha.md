@@ -38,7 +38,7 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 
 			function resetar() {
 				if (this.resultado == 'sim') {
-					$('Mapinha').ApagaTudo(nomeSoft);
+					$('SalvaLocal').ApagaTudo(nomeSoft);
 					location.reload();
 				}
 			}
