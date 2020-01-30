@@ -20,6 +20,30 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 							<param name="wmode" value="transparent">
 						</object>
 ```
+- Caso exista a função `resetar()`, passe para o proximo item, senão coloque o seguinte bloco de código (ele é necessário para que o Limpar funcione):
+```
+		<script type="text/javascript">
+			var nomeSoft = 'XXXXXXX'; //troque pelo nome do software
+			var Perguntas = $H({
+				limpar: {
+					conteudo: '<p>Isso irá apagar todos os dados armazenados, como respostas guardadas, para essa unidade.</p><p style="margin-top:10px;">Você tem certeza?</p>',
+					layout: ['seta_cima','direita'],
+					largura: 10,
+					callback: resetar,
+					// se o usuário clicar em 'Sim', o popup chamará a funcao funcao_pede na qual this.resultado será 'sim'
+					// Veja que essa função deve estar definida, ou ser definida nesse exato momento (como no exemplo "pede2")
+					respostas: [{sim: 'Sim'}, {nao: 'Não'}]
+				}
+			});
+
+			function resetar() {
+				if (this.resultado == 'sim') {
+					$('Mapinha').ApagaTudo(nomeSoft);
+					location.reload();
+				}
+			}
+		</script>
+```
 
 - Na função `resetar()`, para chamadas do tipo `$('SalvaLocal').Salva(nomeSoft, 'item_x',y)` ou `$('Mapinha').Salva(nomeSoft, 'item_x',y)`, onde item é `atividade`, `transicao` ou `desafio`, x é um número e o y o estado inicial, faremos o seguinte (ignore os casos com `automacao_` ou `_parte_`):
 	 * Copie essas linhas para passarmos esses estados iniciais para o estrutura.xml da pasta scripts (mais detalhes na seção sobre o estrutura.xml), caso necessário.
