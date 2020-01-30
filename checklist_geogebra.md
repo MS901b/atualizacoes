@@ -55,7 +55,7 @@ Manter a propriedadfes "appName" sempre como "classic".
 
 Manter as demais <divs> presentes como id="borda_applet", etc, pois são usadas pelo script de interface.
 
-3) Com isso, alguns softwares já podem funcionar sem problemas. A maioria utiliza document.ggbApplet para enviar comandos para o applet do geogebra, como este exemplo:
+Com isso, alguns softwares já podem funcionar sem problemas. A maioria utiliza document.ggbApplet para enviar comandos para o applet do geogebra, como este exemplo:
 
 ```
 	var applet = document.ggbApplet;
