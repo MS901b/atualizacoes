@@ -135,6 +135,7 @@ Exemplo depois
 ### Estado inicial
 Originalmente, o estado inicial do item era definido no mapa.html. Agora isso está na estrutura.xml.
 - Colocar `<estadoinicial>y</estadoinicial>` dentro de cada `<item>`, onde y deve ser substituído pelo número correspondente ao estado inicial daquele item (copiado do mapa.html anteriormente)
+> Quando não definido, o estado inicial será "aberto" (1).
 
 | Estado |nº correspondente |
 |------------|-------|
