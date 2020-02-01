@@ -47,7 +47,7 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 
 - Na função `resetar()`, para chamadas do tipo `$('SalvaLocal').Salva(nomeSoft, 'item_x',y)` ou `$('Mapinha').Salva(nomeSoft, 'item_x',y)`, onde item é `atividade`, `transicao` ou `desafio`, x é um número e o y o estado inicial, faremos o seguinte (ignore os casos com `automacao_` ou `_parte_`):
 	 * Copie essas linhas para passarmos esses estados iniciais para o estrutura.xml da pasta scripts (mais detalhes na seção sobre o estrutura.xml), caso necessário.
-	 * Remova essas linhas do mapa.html.
+	 * Caso não haja condições para aplicar o estado (um if que aplique estados iniciais diferentes) ou menções à alguma tabela de dados, remova essas linhas do mapa.html.
 	 * Caso, ao invés de `'SalvaLocal'` esteja `'Mapinha'`, troque por `'SalvaLocal'`.
 
 - Colocar o seguinte bloco no mapa.html
