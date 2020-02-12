@@ -6,6 +6,7 @@
 - Subir todos os arquivos uma pasta cima (eliminando o primeiro nível que agora deve estar vazio, com exceção da pasta com o conteúdo de fato do software)
 - Remover a pasta jars e todo seu conteúdo
 - Remover os arquivos mapinha.swf, salvalocal.swf, armazenamento.swf da pasta applets
+- Remover a função FlashTag nos arquivos interface.js e interface_grande.js
 - Editar o arquivo index.html atualizando alguns campos da variável que contem os créditos do software pelo conteúdo abaixo:
 
 Na variável FichaUnidade, acrescentar:
