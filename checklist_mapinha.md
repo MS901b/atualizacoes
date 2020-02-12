@@ -6,10 +6,17 @@ Esse checklist substitui o applet Flash mapinha.swf por elementos SVG do HTML5 p
 - Colocar o arquivo mapinha.js na pasta scripts
 > Caso queira, no início do arquivo mapinha.js algumas constantes podem ser ajustadas.
 
+## mapinha.css
+- Colocar o arquivo mapinha.css na pasta css
+
 ## mapa.html
 - Importar o mapinha.js no mapa.html
 ```
 <script type="text/javascript" src="scripts/mapinha.js"></script>
+```
+- Importar o mapinha.css no mapa.html
+```
+<link rel="stylesheet" type="text/css" href="css/mapinha.css" media="screen, projection" />
 ```
 - Remover bloco do object do flash
 ```
