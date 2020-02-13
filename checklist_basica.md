@@ -7,6 +7,15 @@
 - Remover a pasta jars e todo seu conteúdo
 - Remover os arquivos mapinha.swf, salvalocal.swf, armazenamento.swf da pasta applets
 - Remover a função FlashTag nos arquivos interface.js e interface_grande.js
+- Na função "Event.observe(window, 'load', function()" (por volta da linha 21), remover o último else (linhas 37-39*):
+    
+```    
+    else
+    {
+        $('link_acessibilidade').href = 'javascript:setActiveStyleSheet("grande");';
+    }
+```
+
 - Editar o arquivo index.html atualizando alguns campos da variável que contem os créditos do software pelo conteúdo abaixo:
 
 Na variável FichaUnidade, acrescentar:
