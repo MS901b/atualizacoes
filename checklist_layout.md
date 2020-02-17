@@ -46,3 +46,5 @@
 #### mapa.html:
 * No **id="rodape"**: trocar `m3.mat.br` por `m3.ime.unicamp.br`
 
+#### detect.html:
+* Escrever o nome do software na tag **<title></title>**
