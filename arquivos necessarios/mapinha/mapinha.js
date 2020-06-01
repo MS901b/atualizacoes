@@ -104,12 +104,12 @@ class Mapinha {
                 }
             }
             //le curiosidades
-            for (var item of doc[0].getElementsByTagName("curiosidades")) {
+            for (var item of doc[0].getElementsByTagName("curiosidades")[0].getElementsByTagName("curiosidade")) {
                 try {
                     //console.log(item);
                     this.curiosidades.push({
-                        id: item.getElementsByTagName("curiosidade")[0].getElementsByTagName("id")[0].childNodes[0].nodeValue,
-                        titulo: item.getElementsByTagName("curiosidade")[0].getElementsByTagName("titulo")[0].childNodes[0].nodeValue
+                        id: item.getElementsByTagName("id")[0].childNodes[0].nodeValue,
+                        titulo: item.getElementsByTagName("titulo")[0].childNodes[0].nodeValue
                     });
                 } catch (err) {
                     console.error("estrutura mal formada (curiosidades)", err);
@@ -485,9 +485,8 @@ class Mapinha {
             btn.classList.add("btn_mapinha");
             btn.classList.add("btn_curiosidade_mapinha");
             btn.appendChild(document.createTextNode(cur.titulo));
-            btn.addEventListener('click', function() {
-                location.href = "curiosidades.html?id=" + cur.id;
-            });
+            var boundFunction = new Function("return function func_" + cur.id + "(){ location.href = 'curiosidades.html?id=" + cur.id + "' }")();
+            btn.addEventListener('click', boundFunction);
 
             card.appendChild(btn);
         }
