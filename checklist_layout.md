@@ -14,6 +14,7 @@
 * css/popup.css
 * script/abertura.js
 * script/browser.js
+* script/inputs.js
 * img_layout/barra-ferramentas.gif
 * img_layout/logo.gif
 * detect.html
