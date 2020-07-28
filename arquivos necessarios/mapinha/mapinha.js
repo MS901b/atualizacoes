@@ -104,17 +104,19 @@ class Mapinha {
                 }
             }
             //le curiosidades
-            for (var item of doc[0].getElementsByTagName("curiosidades")[0].getElementsByTagName("curiosidade")) {
-                try {
-                    //console.log(item);
-                    this.curiosidades.push({
-                        id: item.getElementsByTagName("id")[0].childNodes[0].nodeValue,
-                        titulo: item.getElementsByTagName("titulo")[0].childNodes[0].nodeValue
-                    });
-                } catch (err) {
-                    console.error("estrutura mal formada (curiosidades)", err);
-                }
-            }
+			if (doc[0].getElementsByTagName("curiosidades").length>0)
+				for (var item of doc[0].getElementsByTagName("curiosidades")[0].getElementsByTagName("curiosidade")) {
+				
+					try {
+						//console.log(item);
+						this.curiosidades.push({
+							id: item.getElementsByTagName("id")[0].childNodes[0].nodeValue,
+							titulo: item.getElementsByTagName("titulo")[0].childNodes[0].nodeValue
+						});
+					} catch (err) {
+						console.error("estrutura mal formada (curiosidades)", err);
+					}
+				}
         }
     }
 
